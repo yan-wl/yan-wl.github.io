@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
+import TicTacToe from '../TicTacToe'
 
 function Copyright() {
   return (
@@ -39,6 +40,7 @@ export default function Footer(props) {
         <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
           {description}
         </Typography>
+        <TicTacToe />      
         <Copyright />
       </Container>
     </footer>
