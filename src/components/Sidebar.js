@@ -27,12 +27,8 @@ export default function Sidebar(props) {
           value="Projects"
         >
           <PointRightButton
-            value="EPIC"
-            onClick={() => display("THIS IS EPIC")}
-          />
-          <PointRightButton
-            value="EPIC"
-            onClick={() => display("THIS IS EPIC")}
+            value="Work in progress"
+            onClick={() => display(<React.Fragment />)}
           />
         </Dropdown>
       </div>
