@@ -1,0 +1,14 @@
+.intro-box {
+  padding: 16px;
+  font-size: 32px;
+  background-color: beige;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 100px;
+}
+
+.intro-para {
+  font-size: 16px;
+}

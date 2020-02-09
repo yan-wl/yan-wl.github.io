@@ -1,0 +1,47 @@
+.collapsed-button {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.collapsed-button:hover {
+  background-color: #2980B9;
+}
+
+.collapsed-button:focus {
+  background-color: #2980B9;
+  outline: none;
+}
+
+.collapsed-button::-moz-focus-inner {
+  border: 0;
+}
+
+.uncollapsed-button {
+  background-color: rgb(138, 141, 138);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.uncollapsed-button:hover {
+  background-color: rgb(106, 107, 106);
+}
+
+.collapsed-button:focus {
+  background-color: rgb(106, 107, 106);
+  outline: none;
+}
+
+.uncollapsed-button::-moz-focus-inner {
+  border: 0;
+}
+
+.button-value {
+  margin-right: 8px;
+}

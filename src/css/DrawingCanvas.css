@@ -1,0 +1,25 @@
+.drawing-canvas {
+  background-color: black;
+  flex-grow: 1;
+}
+
+.drawing-canvas:hover, .drawing-canvas:focus {
+  cursor: crosshair;
+}
+
+.canvas-and-sliders {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.enclosing-div {
+  flex-grow: 1;
+}
+
+.slider-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}

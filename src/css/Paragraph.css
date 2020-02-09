@@ -1,0 +1,27 @@
+.outer-box-with-border {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  display: flex;
+  flex-direction: column;
+}
+
+.outer-box-without-border {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-box {
+  padding: 16px;
+}
+
+.title-text {
+  margin: 0;
+}
+
+.paragraph-box {
+  padding: 16px;
+}
+
+.paragraph-text {
+  margin: 0;
+}
