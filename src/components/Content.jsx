@@ -8,12 +8,12 @@ export default function Content() {
 
   return (
     <div className="content-box">
-      <Sidebar 
-        display={setCanvasComponent} 
+      <Sidebar
+        display={setCanvasComponent}
       />
       <Canvas
         generator={() => canvasComponent}
       />
     </div>
-  )
+  );
 }

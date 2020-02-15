@@ -4,10 +4,10 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <React.Fragment>
+    <>
       <Content />
       <Footer />
-    </React.Fragment>
+    </>
   );
 }
 
