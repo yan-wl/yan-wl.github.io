@@ -1,13 +1,8 @@
-.footer-box {
+.header-box {
   box-sizing: border-box;
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   background-color: lightgray;
-}
-
-.footer-item {
-  margin-left: 8px;
-  margin-right: 8px;
 }
