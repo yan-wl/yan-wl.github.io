@@ -1,7 +1,8 @@
 import React from 'react';
+import TypingGame from './TypingGame';
 
 export default function Playground() {
   return (
-    <h1>WORK IN PROGRESS</h1>
+    <TypingGame />
   );
 }
