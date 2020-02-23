@@ -9,6 +9,7 @@
 .content {
   height: calc(100% - 48px - 48px);
   overflow-y: auto;
+  background-color: rgb(219, 225, 231);
 }
 
 .footer {

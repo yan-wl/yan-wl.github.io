@@ -9,23 +9,27 @@ export default function Footer() {
     <div className="footer-box">
       <div className="footer-item">
         <a
-          // href="https://www.linkedin.com/in/wei-liang-yan-ab0299185/"
-          href="https://www.linkedin.com/"
+          href="https://www.linkedin.com/in/wei-liang-yan-ab0299185/"
         >
           <FontAwesomeIcon
             icon={faLinkedin}
             size="2x"
+            style={{
+              color: 'white',
+            }}
           />
         </a>
       </div>
       <div className="footer-item">
         <a
-          // href="https://www.github.com/uberSaiyan"
-          href="https://www.github.com/"
+          href="https://www.github.com/uberSaiyan"
         >
           <FontAwesomeIcon
             icon={faGithub}
             size="2x"
+            style={{
+              color: 'white',
+            }}
           />
         </a>
       </div>
@@ -35,7 +39,7 @@ export default function Footer() {
             icon={faEnvelope}
             size="2x"
             style={{
-              color: '#5f3673',
+              color: 'white',
             }}
           />
         </a>
