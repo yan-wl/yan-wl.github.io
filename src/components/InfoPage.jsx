@@ -22,7 +22,7 @@ export default function InfoPage() {
       <p
         className="info-text"
       >
-        Passionate about software
+        Passionate about web development
       </p>
     </>
   );

@@ -1,0 +1,13 @@
+.slider-button {
+  border-radius: 24px;
+  display: flex;
+  width: 116px;
+  height: 16px;
+  padding: 0;
+  background-color: white;
+  border: 0
+}
+
+.slider-button:hover {
+  cursor: pointer;
+}

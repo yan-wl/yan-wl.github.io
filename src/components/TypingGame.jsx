@@ -3,6 +3,11 @@ import '../css/TypingGame.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRedo } from '@fortawesome/free-solid-svg-icons';
 import HighlightableText from './HighlightableText';
+import ToggleButton from './ToggleButton';
+
+function capitalize(word) {
+  return word.charAt(0).toUpperCase() + word.slice(1);
+}
 
 export default class TypingGame extends React.Component {
   constructor() {
@@ -18,6 +23,8 @@ export default class TypingGame extends React.Component {
       timerOn: false,
       timerStart: 0,
       timerEnd: 0,
+      isCapitalized: false,
+      normalText: '',
     };
   }
 
@@ -29,6 +36,7 @@ export default class TypingGame extends React.Component {
       text,
       words,
       end,
+      normalText: text,
     });
   }
 
@@ -37,6 +45,21 @@ export default class TypingGame extends React.Component {
     if (input.trimLeft().includes(' ')) {
       this.checkCorrect();
     }
+  }
+
+  refreshedState() {
+    const { words } = this.state;
+    return {
+      ...this.state,
+      isPlaying: true,
+      index: 0,
+      input: '',
+      start: 0,
+      end: words[0].length,
+      timerOn: false,
+      timerStart: 0,
+      timerEnd: 0,
+    };
   }
 
   checkCorrect() {
@@ -66,27 +89,38 @@ export default class TypingGame extends React.Component {
 
   render() {
     const {
-      isPlaying, text, words, input, start, end, timerOn, timerStart, timerEnd,
+      isPlaying, text, words, input, start, end, timerOn, timerStart, timerEnd, isCapitalized,
+      normalText,
     } = this.state;
 
     return (
       <div className="game-box">
         <div className="reset-button-box">
+          <ToggleButton
+            leftText="Capitalize"
+            rightText="Normal"
+            onClick={() => {
+              if (!isCapitalized) {
+                const capitalizedWords = words.map((word) => capitalize(word));
+                const capitalizedText = capitalizedWords.join(' ');
+                this.setState({
+                  isCapitalized: !isCapitalized,
+                  words: capitalizedWords,
+                  text: capitalizedText,
+                });
+              } else {
+                this.setState({
+                  isCapitalized: !isCapitalized,
+                  text: normalText,
+                  words: normalText.split(' '),
+                });
+              }
+            }}
+          />
           <button
             className="reset-button"
             type="button"
-            onClick={() => this.setState({
-              isPlaying: true,
-              index: 0,
-              text,
-              words,
-              input: '',
-              start: 0,
-              end: words[0].length,
-              timerOn: false,
-              timerStart: 0,
-              timerEnd: 0,
-            })}
+            onClick={() => this.setState(this.refreshedState())}
           >
             <FontAwesomeIcon
               icon={faRedo}
