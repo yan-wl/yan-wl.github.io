@@ -5,8 +5,45 @@ import { faRedo } from '@fortawesome/free-solid-svg-icons';
 import HighlightableText from './HighlightableText';
 import ToggleButton from './ToggleButton';
 
+const TEXT_LIST = [
+  'The quick brown fox jumps over the lazy dog.',
+  'When they first built the University of California at Irvine they just put the buildings in. '
+  + 'They did not put any sidewalks, they just planted grass. Perl is just that kind of language. '
+  + 'It is not designed from first principles. Perl is those sidewalks in the grass.',
+  'The computer programmer is a creator of universes for which he alone is the lawgiver. '
+  + 'No playwright, no stage director, no emperor, however powerful, has ever exercised such '
+  + 'absolute authority to arrange a stage or field of battle and to command such unswervingly dutiful actors or troops.',
+  'Programs must be written for people to read, and only incidentally for machines to execute.',
+  'Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.',
+  'Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, '
+  + 'and the Universe trying to produce bigger and better idiots. So far, the Universe is winning.',
+  'Give a man a program, frustrate him for a day. Teach a man to program, frustrate him for a lifetime.',
+  'Everyone knows that debugging is twice as hard as writing a program in the first place. '
+  + 'So if you\'re as clever as you can be when you write it, how will you ever debug it?',
+  'A computer is like a violin. You can imagine a novice trying first a phonograph and then a violin. '
+  + 'The latter, he says, sounds terrible. That is the argument we have heard from our humanists and most of our computer scientists. '
+  + 'Computer programs are good, they say, for particular purposes, but they aren\'t flexible. Neither is a violin, or a typewriter, until you learn how to use it.',
+  'Talk is cheap. Show me the code.',
+];
+
 function capitalize(word) {
   return word.charAt(0).toUpperCase() + word.slice(1);
+}
+
+function getRandomInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function getText() {
+  return TEXT_LIST[getRandomInteger(0, TEXT_LIST.length - 1)];
+}
+
+function getNewText(oldText) {
+  const newText = getText();
+  if (newText !== oldText) {
+    return newText;
+  }
+  return getNewText(oldText);
 }
 
 export default class TypingGame extends React.Component {
@@ -29,7 +66,7 @@ export default class TypingGame extends React.Component {
   }
 
   componentDidMount() {
-    const text = 'The quick brown fox jumps over the lazy dog.';
+    const text = getText();
     const words = text.split(' ');
     const end = words[0].length;
     this.setState({
@@ -48,17 +85,28 @@ export default class TypingGame extends React.Component {
   }
 
   refreshedState() {
-    const { words } = this.state;
+    const { normalText, isCapitalized } = this.state;
+    let newText = getNewText(normalText);
+    const newNormalText = newText;
+    let newWords = newText.split(' ');
+    const newEnd = newWords[0].length;
+    if (isCapitalized) {
+      newWords = newWords.map((word) => capitalize(word));
+      newText = newWords.join(' ');
+    }
     return {
       ...this.state,
       isPlaying: true,
       index: 0,
       input: '',
       start: 0,
-      end: words[0].length,
       timerOn: false,
       timerStart: 0,
       timerEnd: 0,
+      text: newText,
+      words: newWords,
+      end: newEnd,
+      normalText: newNormalText,
     };
   }
 
