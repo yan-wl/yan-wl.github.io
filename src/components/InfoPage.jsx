@@ -15,13 +15,14 @@ export default function InfoPage() {
       <hr className="section-separator" />
       <h1 className="big-text">Projects</h1>
       <a href="https://github.com/SoilingRogue/Orbital2019">
-        <h2>Basic Instinct | Orbital 2019 Project</h2>
+        <h2>Basic Instinct</h2>
       </a>
       <div
         style={{
           display: 'flex',
           flexWrap: 'wrap',
           justifyContent: 'center',
+          alignSelf: 'stretch',
         }}
       >
         <iframe
@@ -29,16 +30,16 @@ export default function InfoPage() {
           width="426"
           height="240"
           src="https://www.youtube.com/embed/lS5H-fB6O4o"
+          frameBorder="0"
+          allowFullScreen
           style={{
-            flexShrink: 0,
-            marginBottom: '16px',
             marginLeft: '32px',
             marginRight: '32px',
           }}
         />
         <p
           style={{
-            maxWidth: '400px',
+            maxWidth: '426px',
             fontSize: '20px',
           }}
         >
