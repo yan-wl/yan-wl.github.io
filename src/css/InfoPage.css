@@ -1,0 +1,29 @@
+.profile-pic {
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  margin-top: 0px;
+  margin-bottom: 32px;
+}
+
+.big-text {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 0px;
+  margin-bottom: 16px;
+  font-size: 48px;
+}
+
+.info-text {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 0px;
+  margin-bottom: 8px;
+  font-size: 24px;
+}
+
+.section-separator {
+  width: 300px;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}

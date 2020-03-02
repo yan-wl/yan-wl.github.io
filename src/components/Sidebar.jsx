@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../css/Sidebar.css';
 import Dropdown from './Dropdown';
 import InfoSection from './InfoSection';
@@ -28,10 +29,14 @@ export default function Sidebar(props) {
         >
           <PointRightButton
             value="Work in progress"
-            onClick={() => display(<React.Fragment />)}
+            onClick={() => display(<></>)}
           />
         </Dropdown>
       </div>
     </div>
-  )
+  );
 }
+
+Sidebar.propTypes = {
+  display: PropTypes.func.isRequired,
+};

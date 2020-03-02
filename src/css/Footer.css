@@ -1,9 +1,10 @@
 .footer-box {
+  box-sizing: border-box;
+  height: 100%;
   display: flex;
   justify-content: center;
-  background-color: lightgray;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  align-items: center;
+  background-color: rgb(70, 70, 70);
 }
 
 .footer-item {

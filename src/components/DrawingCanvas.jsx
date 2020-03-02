@@ -37,14 +37,14 @@ export default function DrawingCanvas() {
           onMouseMove={(event) => {
             if (mouseWithin && drawing) {
               const drawingCanvas = drawingCanvasRef.current;
-              const ctx = drawingCanvas.getContext("2d");
+              const ctx = drawingCanvas.getContext('2d');
               const mouseX = event.clientX;
               const mouseY = event.clientY;
-              const offsetLeft = drawingCanvas.offsetLeft;
-              const offsetTop = drawingCanvas.offsetTop;
+              const { offsetLeft } = drawingCanvas;
+              const { offsetTop } = drawingCanvas;
               const drawX = mouseX - offsetLeft;
               const drawY = mouseY - offsetTop;
-              ctx.fillStyle = "white";
+              ctx.fillStyle = 'white';
               ctx.fillRect(drawX, drawY, 2, 2);
             }
           }}
@@ -53,14 +53,14 @@ export default function DrawingCanvas() {
       <div
         className="slider-box"
       >
-        <Slider 
+        <Slider
           label="height"
           initial={height}
           min={0}
           max={maxHeight}
           update={setHeight}
         />
-        <Slider 
+        <Slider
           label="width"
           initial={width}
           min={0}

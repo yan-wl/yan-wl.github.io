@@ -1,0 +1,36 @@
+.header-box {
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(70, 70, 70);
+}
+
+.toggle-button {
+  background-color: transparent;
+  color: white;
+  border-width: 0;
+  margin-right: 16px;
+  outline: none;
+}
+
+.toggle-button:hover {
+  cursor: pointer;
+  color: gold;
+}
+
+.toggle-button::-moz-focus-inner {
+  border: 0;
+}
+
+.header-link {
+  margin-right: 16px;
+  color: white;
+  text-decoration: none;
+  outline: none;
+}
+
+.header-link:hover {
+  color: rgb(250, 201, 42);
+}
