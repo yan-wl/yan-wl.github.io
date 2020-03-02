@@ -35,7 +35,11 @@ export default class App extends React.Component {
 
   render() {
     const { mood } = this.state;
-    const content = mood === MOOD.SERIOUS ? <InfoPage /> : <Playground />;
+    const content = mood === MOOD.SERIOUS ? (
+
+      <InfoPage />
+
+    ) : <Playground />;
     const label = mood === MOOD.SERIOUS ? 'Playground' : 'About';
 
     return (

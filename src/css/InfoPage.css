@@ -6,7 +6,7 @@
   margin-bottom: 32px;
 }
 
-.name-text {
+.big-text {
   text-align: center;
   text-transform: uppercase;
   margin-top: 0px;
@@ -20,4 +20,10 @@
   margin-top: 0px;
   margin-bottom: 8px;
   font-size: 24px;
+}
+
+.section-separator {
+  width: 300px;
+  margin-top: 48px;
+  margin-bottom: 48px;
 }

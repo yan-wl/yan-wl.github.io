@@ -7,6 +7,15 @@ export default function Header(props) {
 
   return (
     <div className="header-box">
+      <span
+        style={{
+          marginLeft: '16px',
+          maxWidth: '64px',
+          fontSize: '11px',
+        }}
+      >
+        I regret making this without a CSS library 😢
+      </span>
       <button
         className="toggle-button"
         type="button"
