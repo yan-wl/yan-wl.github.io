@@ -8,6 +8,8 @@ export default function Header(props) {
   return (
     <div className="header-box">
       <span
+        role="img"
+        aria-label="sad-face"
         style={{
           marginLeft: '16px',
           maxWidth: '64px',
